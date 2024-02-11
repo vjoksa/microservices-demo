@@ -36,7 +36,7 @@ jobs:
         run: terraform -chdir=${{ secrets.TF_DIR_PR }} fmt
 
       - name: Terraform Plan
-        run: terraform -chdir=${{ secrets.TF_DIR_PR }} plan -out=tfplan
+        run: terraform -chdir=${{ secrets.TF_DIR_PR }} plan -lock=false -out=tfplan
 
       # Outputs the plan data for manual review
       - name: Output Terraform Plan Result

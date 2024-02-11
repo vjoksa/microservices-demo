@@ -31,7 +31,7 @@ jobs:
         run: terraform -chdir=${{ secrets.TF_DIR_NP }} fmt
 
       - name: Terraform Plan
-        run: terraform -chdir=${{ secrets.TF_DIR_NP }} plan
+        run: terraform -chdir=${{ secrets.TF_DIR_NP }} plan -lock=false
 
       - name: Apply Terraform
         run: terraform -chdir=${{ secrets.TF_DIR_NP }} apply -auto-approve
