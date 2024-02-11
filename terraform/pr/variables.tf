@@ -1,4 +1,5 @@
 variable "project_id" {
+  default = "gd-gcp-gridu-devops-t1-t2"
   description = "The GCP project ID"
 }
 
